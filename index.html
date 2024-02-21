@@ -65,6 +65,8 @@
         .section-content {
             display: none;
             margin-top: 10px;
+            transition: max-height 0.3s ease; /* Smooth transition */
+            overflow: hidden; /* Hide overflow */
         }
 
         .point {
@@ -101,6 +103,10 @@
             color: #333333;
             text-decoration: underline;
             cursor: pointer;
+        }
+
+        .opened {
+            max-height: 500px; /* Adjust the max height based on content */
         }
     </style>
 </head>
@@ -139,7 +145,7 @@
         </div>
     </div>
 
-    <div class="contact-container">
+    <div class="contact-container" id="contact-container">
         Contact us at <a href="mailto:apgo.uno@gmail.com">apgo.uno@gmail.com</a> or <a href="https://t.me/tarnkappen"> @tarnkappen on Telegram</a>.
         <br>
         <a href="https://mission.apgo.ink/donate" class="donate-link">Donate</a>
@@ -147,17 +153,15 @@
 
     <script>
         function toggleSection(sectionId) {
-            var sections = document.querySelectorAll('.section-content');
-            for (var i = 0; i < sections.length; i++) {
-                if (sections[i].id === sectionId) {
-                    if (sections[i].style.display === 'block') {
-                        sections[i].style.display = 'none';
-                    } else {
-                        sections[i].style.display = 'block';
-                    }
-                } else {
-                    sections[i].style.display = 'none';
-                }
+            var sectionContent = document.getElementById(sectionId);
+            var contactContainer = document.getElementById('contact-container');
+
+            if (sectionContent.classList.contains('opened')) {
+                sectionContent.classList.remove('opened');
+                contactContainer.style.marginTop = "50px"; /* Reset margin top */
+            } else {
+                sectionContent.classList.add('opened');
+                contactContainer.style.marginTop = (sectionContent.offsetHeight + 100) + "px"; /* Adjust margin top based on content */
             }
         }
     </script>
