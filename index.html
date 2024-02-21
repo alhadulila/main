@@ -75,6 +75,9 @@
             color: #ffffff; /* White font color */
             padding: 20px 0;
             text-align: center;
+            display: flex;
+            justify-content: space-between; /* Align buttons evenly */
+            align-items: center;
         }
 
         .contact-container a {
@@ -103,7 +106,7 @@
             background-color: #0e70c0; /* Darker blue hover color */
         }
 
-        .subdomain-btn {
+        .explore-btn {
             background-color: #1e90ff; /* Dark blue background color */
             color: #ffffff;
             border: none;
@@ -112,10 +115,10 @@
             font-size: 20px;
             text-decoration: none;
             transition: background-color 0.3s ease;
-            margin-top: 20px; /* Adjust margin to create space */
+            margin-right: auto; /* Push the button to the leftmost position */
         }
 
-        .subdomain-btn:hover {
+        .explore-btn:hover {
             background-color: #0e70c0; /* Darker blue hover color */
         }
     </style>
@@ -156,10 +159,8 @@
             </ul>
         </div>
 
-        <!-- Button to main.apgo.ink/links -->
-        <a href="https://main.apgo.ink/links" class="subdomain-btn">Explore Subdomains</a>
-
         <div class="contact-container">
+            <a href="main.apgo.ink/links" class="explore-btn">Explorer</a> <!-- Added "Explorer" button -->
             <a href="mailto:apgo.uno@gmail.com"><i class="fas fa-envelope"></i> Contact Us</a>
             <a href="https://t.me/tarnkappen"><i class="fab fa-telegram"></i> @tarnkappen on Telegram</a>
             <a href="https://mission.apgo.ink/donate" class="donate-btn">Donate</a>
