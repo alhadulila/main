@@ -1,6 +1,6 @@
 body {
     background-color: #111;
-    color: #fff;
+    color: #ddd;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #999;
     text-decoration: none;
     font-size: 18px;
 }
@@ -42,9 +42,29 @@ section {
 
 footer {
     text-align: center;
-    background-color: #000;
+    background-color: #444;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+}
+
+.glow {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+.keyword {
+    color: #00FF00;
+    transition: color 0.5s ease-in-out;
+}
+
+.keyword:hover {
+    color: #00FF00;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00FF00;
+    }
+    100% {
+        text-shadow: 0 0 10px #00FF00;
+    }
 }
