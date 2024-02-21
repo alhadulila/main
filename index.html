@@ -8,11 +8,11 @@
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             background-image: url('background.png');
             background-size: cover;
             background-position: center;
-            filter: brightness(30%) grayscale(70%);
+            color: #ffffff;
         }
 
         .overlay {
@@ -24,49 +24,43 @@
             background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
         }
 
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
             text-align: center;
-            color: #ffffff;
         }
 
         .title {
-            font-size: 48px;
+            font-size: 36px;
             margin-bottom: 20px;
             text-decoration: underline;
         }
 
         .section {
-            margin: 20px auto;
-            max-width: 800px;
             background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
+            margin-bottom: 20px;
             border-radius: 10px;
+            padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         .section-title {
             font-size: 24px;
             font-weight: bold;
-            cursor: pointer;
             margin-bottom: 10px;
-            color: #333333;
-        }
-
-        .section-content {
-            display: none;
-            margin-top: 10px;
-            text-align: left;
         }
 
         .point {
-            list-style: none;
             font-size: 18px;
-            color: #333333;
-            margin-left: 20px;
+            margin-bottom: 5px;
+            text-align: left;
         }
 
         .contact-container {
@@ -75,21 +69,19 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
-            color: #ffffff;
         }
 
-        .donate-link {
+        .contact-container a {
             color: #ffffff;
             text-decoration: underline;
-            cursor: pointer;
-            margin-left: 10px;
+            margin: 0 10px;
         }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
 
-    <div class="content">
+    <div class="container">
         <h1 class="title">APGO - The Organization of the Future</h1>
 
         <div class="section" onclick="toggleSection('tasks')">
@@ -124,8 +116,8 @@
     </div>
 
     <div class="contact-container">
-        Contact us at <a href="mailto:apgo.uno@gmail.com">apgo.uno@gmail.com</a> or <a href="https://t.me/tarnkappen"> @tarnkappen on Telegram</a>
-        <a href="https://mission.apgo.ink/donate" class="donate-link">Donate</a>
+        <a href="mailto:apgo.uno@gmail.com">Contact Us</a>
+        <a href="https://mission.apgo.ink/donate">Donate</a>
     </div>
 
     <script>
