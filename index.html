@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>APGO - The Organization of the Future</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
         }
 
         .background-container {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
             background-image: url('background.png');
@@ -26,12 +27,47 @@
 
         .title {
             text-align: center;
-            color: white;
-            font-size: 36px;
-            margin-top: 100px; /* Adjust as needed */
+            color: #ffffff;
+            font-size: 48px;
+            margin-top: 80px;
             text-decoration: underline;
         }
-        /* Add additional styling for your website here */
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            cursor: pointer;
+        }
+
+        .section-content {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .contact {
+            text-align: center;
+            color: #333333;
+            margin-top: 50px;
+        }
+
+        .donate-link {
+            color: #333333;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -39,6 +75,51 @@
 
     <h1 class="title">APGO - The Organization of the Future</h1>
 
-    <!-- Your website content goes here -->
+    <div class="container">
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('tasks')">Tasks</div>
+            <ul class="section-content" id="tasks">
+                <li>Maintaining Peace</li>
+                <li>Developing Humanity</li>
+                <li>Improving the lives of all</li>
+                <li>Fighting poverty</li>
+                <li>Governing transparently</li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('mission')">Mission</div>
+            <ul class="section-content" id="mission">
+                <li>Make the world a better place</li>
+                <li>Reveal secrets from governments around the world</li>
+                <li>Add more transparency</li>
+                <li>Minimize wars and violence</li>
+                <li>Ensure equality for all</li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="section-title" onclick="toggleSection('projects')">Projects</div>
+            <ul class="section-content" id="projects">
+                <li>Basilisk Messenger</li>
+                <li>Quirloo Education</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contact">
+        Contact us at <a href="mailto:apgo.uno@gmail.com">apgo.uno@gmail.com</a> or <a href="https://t.me/tarnkappen"> @tarnkappen on Telegram</a>.
+        <br>
+        <a href="https://mission.apgo.ink/donate" class="donate-link">Donate</a>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === 'block') {
+                section.style.display = 'none';
+            } else {
+                section.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>
