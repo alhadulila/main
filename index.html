@@ -34,6 +34,8 @@
         }
 
         .container {
+            width: 60%; /* Set width of container */
+            margin: 0 auto; /* Center horizontally */
             margin-top: 50px;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
@@ -50,6 +52,8 @@
             font-weight: bold;
             color: #333333;
             cursor: pointer;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         .section-content {
@@ -57,10 +61,30 @@
             margin-top: 10px;
         }
 
+        .point {
+            list-style: none;
+            margin-left: 20px;
+            position: relative;
+            padding-left: 20px;
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .point:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #1e90ff;
+        }
+
         .contact {
             text-align: center;
             color: #333333;
             margin-top: 50px;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .donate-link {
@@ -79,28 +103,28 @@
         <div class="section">
             <div class="section-title" onclick="toggleSection('tasks')">Tasks</div>
             <ul class="section-content" id="tasks">
-                <li>Maintaining Peace</li>
-                <li>Developing Humanity</li>
-                <li>Improving the lives of all</li>
-                <li>Fighting poverty</li>
-                <li>Governing transparently</li>
+                <li class="point">Maintaining Peace</li>
+                <li class="point">Developing Humanity</li>
+                <li class="point">Improving the lives of all</li>
+                <li class="point">Fighting poverty</li>
+                <li class="point">Governing transparently</li>
             </ul>
         </div>
         <div class="section">
             <div class="section-title" onclick="toggleSection('mission')">Mission</div>
             <ul class="section-content" id="mission">
-                <li>Make the world a better place</li>
-                <li>Reveal secrets from governments around the world</li>
-                <li>Add more transparency</li>
-                <li>Minimize wars and violence</li>
-                <li>Ensure equality for all</li>
+                <li class="point">Make the world a better place</li>
+                <li class="point">Reveal secrets from governments around the world</li>
+                <li class="point">Add more transparency</li>
+                <li class="point">Minimize wars and violence</li>
+                <li class="point">Ensure equality for all</li>
             </ul>
         </div>
         <div class="section">
             <div class="section-title" onclick="toggleSection('projects')">Projects</div>
             <ul class="section-content" id="projects">
-                <li>Basilisk Messenger</li>
-                <li>Quirloo Education</li>
+                <li class="point">Basilisk Messenger</li>
+                <li class="point">Quirloo Education</li>
             </ul>
         </div>
     </div>
@@ -113,11 +137,17 @@
 
     <script>
         function toggleSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section.style.display === 'block') {
-                section.style.display = 'none';
-            } else {
-                section.style.display = 'block';
+            var sections = document.querySelectorAll('.section-content');
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].id === sectionId) {
+                    if (sections[i].style.display === 'block') {
+                        sections[i].style.display = 'none';
+                    } else {
+                        sections[i].style.display = 'block';
+                    }
+                } else {
+                    sections[i].style.display = 'none';
+                }
             }
         }
     </script>
