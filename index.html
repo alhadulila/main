@@ -83,43 +83,40 @@
         .contact-container a {
             text-decoration: none;
             margin: 0 20px;
-            transition: background-color 0.3s ease;
-            color: inherit; /* Inherit color from parent */
+            transition: background-color 0.3s ease; /* Only change background color */
+            color: #ffffff; /* White font color */
         }
 
         .contact-container a:hover {
-            background-color: #1e90ff; /* Dark blue hover background color */
+            background-color: rgba(30, 144, 255, 0.7); /* Darker blue hover color */
         }
 
         .explore-btn {
             background-color: #1e90ff; /* Dark blue background color */
-            color: #ffffff; /* White font color */
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 20px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            margin-right: auto; /* Push the button to the leftmost position */
+            transition: background-color 0.3s ease; /* Only change background color */
         }
 
         .explore-btn:hover {
-            background-color: #0e70c0; /* Darker blue hover background color */
+            background-color: rgba(30, 144, 255, 0.7); /* Darker blue hover color */
         }
 
         .donate-btn {
             background-color: #1e90ff; /* Dark blue background color */
-            color: #ffffff; /* White font color */
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
             font-size: 20px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease; /* Only change background color */
         }
 
         .donate-btn:hover {
-            background-color: #0e70c0; /* Darker blue hover background color */
+            background-color: rgba(30, 144, 255, 0.7); /* Darker blue hover color */
         }
     </style>
 </head>
@@ -160,7 +157,7 @@
         </div>
 
         <div class="contact-container">
-            <a href="https://main.apgo.ink/links" class="explore-btn">Explorer</a>
+            <a href="https://main.apgo.ink/links" class="explore-btn">Explorer</a> <!-- Changed to https:// link -->
             <a href="mailto:apgo.uno@gmail.com"><i class="fas fa-envelope"></i> Contact Us</a>
             <a href="https://t.me/tarnkappen"><i class="fab fa-telegram"></i> @tarnkappen on Telegram</a>
             <a href="https://mission.apgo.ink/donate" class="donate-btn">Donate</a>
