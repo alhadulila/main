@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APGO - The Organization of the Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-image: url('background.png');
             background-size: cover;
             background-position: center;
@@ -32,7 +33,7 @@
         }
 
         .title {
-            font-size: 36px;
+            font-size: 48px;
             margin-bottom: 20px;
             text-decoration: underline;
         }
@@ -69,12 +70,33 @@
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
+            font-size: 20px;
         }
 
         .contact-container a {
             color: #ffffff;
-            text-decoration: underline;
-            margin: 0 10px;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-container a:hover {
+            color: #1e90ff;
+        }
+
+        .donate-btn {
+            background-color: #1e90ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .donate-btn:hover {
+            background-color: #0e70c0;
         }
     </style>
 </head>
@@ -116,8 +138,9 @@
     </div>
 
     <div class="contact-container">
-        <a href="mailto:apgo.uno@gmail.com">Contact Us</a>
-        <a href="https://mission.apgo.ink/donate">Donate</a>
+        <a href="mailto:apgo.uno@gmail.com"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="https://t.me/tarnkappen"><i class="fab fa-telegram"></i> @tarnkappen on Telegram</a>
+        <a href="https://mission.apgo.ink/donate" class="donate-btn">Donate</a>
     </div>
 
     <script>
