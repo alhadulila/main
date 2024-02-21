@@ -84,12 +84,15 @@
             color: #1e90ff;
         }
 
-        .contact {
+        .contact-container {
             text-align: center;
-            color: #333333;
             margin-top: 50px;
-            border: 2px solid #ccc; /* Greyish border */
+        }
+
+        .contact {
+            display: inline-block;
             padding: 10px;
+            border: 2px solid #ccc; /* Greyish border */
             border-radius: 10px;
             background-color: #f9f9f9;
             transition: all 0.3s ease; /* Smooth transition */
@@ -141,10 +144,13 @@
         </div>
     </div>
 
-    <div class="contact">
-        Contact us at <a href="mailto:apgo.uno@gmail.com">apgo.uno@gmail.com</a> or <a href="https://t.me/tarnkappen"> @tarnkappen on Telegram</a>.
-        <br>
-        <a href="https://mission.apgo.ink/donate" class="donate-link">Donate</a>
+    <div class="contact-container">
+        <div class="contact">
+            Contact us at <a href="mailto:apgo.uno@gmail.com">apgo.uno@gmail.com</a> or <a href="https://t.me/tarnkappen"> @tarnkappen on Telegram</a>.
+        </div>
+        <div class="contact">
+            <a href="https://mission.apgo.ink/donate" class="donate-link">Donate</a>
+        </div>
     </div>
 
     <script>
